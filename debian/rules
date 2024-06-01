@@ -1,4 +1,9 @@
 #!/usr/bin/make -f
 
 %:
-	dh $@
+	dh $@ --builddirectory=_build --buildsystem=golang
+
+# Use the "-short" mode for testing to disable
+# network tests. Those will fail in buildds.
+override_dh_auto_test:
+	dh_auto_test -O--buildsystem=golang -- -short

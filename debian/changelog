@@ -1,5 +1,69 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-jlaffaye-ftp (0.2.0-1) unstable; urgency=medium
 
-  * Initial release
+  * Team upload.
+  * New upstream version 0.2.0
+  * Configure d/watch to track tags instead of commits
+  * Bump Standards-Version to 4.6.2 (no changes)
+  * Remove skip_walker_test patch, fixed upstream
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Maytham Alsudany <maytha8thedev@gmail.com>  Mon, 25 Dec 2023 21:44:53 +0530
+
+golang-github-jlaffaye-ftp (0.0~git20220829.b85cf1e-1) unstable; urgency=medium
+
+  * New upstream version 0.0~git20220829.b85cf1e
+  * Reorder fields in debian/control and debian/copyright
+  * Change Section from devel to golang
+  * Add "Rules-Requires-Root: no" to debian/control
+  * Use dh-sequence-golang instead of dh-golang and --with=golang
+  * Update versioned dependencies as per go.mod:
+    - Add golang-github-hashicorp-go-multierror-dev (>= 1.1.1)
+    - Bump golang-github-stretchr-testify-dev (>= 1.8.0)
+  * Mark library package with "Multi-Arch: foreign"
+  * Bump Standards-Version to 4.6.1 (no change)
+  * debian/rules: Invoke dh with --builddirectory=_build
+  * debian/gbp.conf: Set debian-branch to debian/sid for DEP-14 conformance
+  * Add myself to the list of Uploaders
+
+ -- Anthony Fok <foka@debian.org>  Tue, 30 Aug 2022 20:34:09 -0600
+
+golang-github-jlaffaye-ftp (0.0~git20200812.39e3779-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.4.1, no changes needed.
+
+  [ Drew Parsons ]
+  * New upstream snapshot
+  * versioned Depends: golang-github-stretchr-testify-dev (>= 1.6.1~)
+  * Standards-Version: 4.5.0
+  * debhelper compatibility level 13
+  * debian patch skip_walker_test.patch skips
+    TestEmptyStackReturnsFalse and TestCurAndStackSetCorrectly tests
+    (in short test run, "go test --short"). See upstream Issue#204.
+
+ -- Drew Parsons <dparsons@debian.org>  Mon, 28 Sep 2020 15:24:07 +0800
+
+golang-github-jlaffaye-ftp (0.0~git20190828.6aaa91c-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Dr. Tobias Quathamer ]
+  * New upstream version 0.0~git20190828.6aaa91c
+  * Update to Standards-Version 4.4.0
+    - Use Priority: optional
+  * Update team name
+  * Update d/watch for git mode
+  * Switch to debhelper-compat and use v12
+  * Update d/copyright
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Sat, 28 Sep 2019 14:31:49 +0200
+
+golang-github-jlaffaye-ftp (0.0~git20170707.0.a05056b-1) unstable; urgency=medium
+
+  * Initial release (Closes: #867687)
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Sat, 08 Jul 2017 16:40:03 +0200
